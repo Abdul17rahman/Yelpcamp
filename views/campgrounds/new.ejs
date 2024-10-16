@@ -1,0 +1,79 @@
+<% layout('layout/boilerplate') %>
+
+<div class="row">
+  <h2 class="text-center">Add a new CampGround!</h2>
+  <div class="col-6 offset-3">
+    <form
+      class="validated-form g-3"
+      action="/campgrounds"
+      method="post"
+      novalidate
+      enctype="multipart/form-data"
+    >
+      <div class="mb-3">
+        <label for="campName" class="form-label">Campground Name:</label>
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Enter Camp Name"
+          name="campground[title]"
+          id="campName"
+          required
+        />
+        <div class="valid-feedback">Looks good!</div>
+      </div>
+      <label for="campPrice" class="form-label">Price:</label>
+      <div class="input-group mb-3">
+        <span class="input-group-text" id="campPrice">$</span>
+        <input
+          type="text"
+          class="form-control"
+          placeholder="0.0"
+          id="campPrice"
+          aria-label="Username"
+          name="campground[price]"
+          aria-describedby="campPrice"
+          required
+        />
+        <div class="valid-feedback">Looks good!</div>
+      </div>
+      <!-- <div class="mb-3">
+        <label for="campPrice" class="form-label">Price:</label>
+        <input
+          type="text"
+          class="form-control"
+          name="campground[price]"
+          id="campPrice"
+        />
+      </div> -->
+      <div class="mb-3">
+        <label for="campLocation" class="form-label">Location:</label>
+        <input
+          type="text"
+          class="form-control"
+          name="campground[location]"
+          placeholder="Enter Location"
+          id="campLocation"
+          required
+        />
+        <div class="valid-feedback">Looks good!</div>
+      </div>
+      <div class="mb-3">
+        <label for="campDes" class="form-label">Description</label>
+        <textarea
+          class="form-control"
+          name="campground[description]"
+          placeholder="Description about the Campground"
+          id="campDes"
+          rows="3"
+          required
+        ></textarea>
+        <div class="valid-feedback">Looks good!</div>
+      </div>
+      <div class="col-12">
+        <a href="/campgrounds" class="btn btn-warning">Cancel</a>
+        <button type="submit" class="btn btn-primary">Add Camp</button>
+      </div>
+    </form>
+  </div>
+</div>

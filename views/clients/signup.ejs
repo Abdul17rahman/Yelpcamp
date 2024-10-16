@@ -1,0 +1,61 @@
+<% layout('layout/boilerplate') %>
+
+<div class="row mt-3">
+  <h2 class="text-center">Sign Up Form</h2>
+  <div class="col-6 offset-3">
+    <form class="validated-form g-3" action="/signup" method="post" novalidate>
+      <div class="mb-3">
+        <label for="username" class="form-label">User Name:</label>
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Enter Your UserName"
+          name="username"
+          id="username"
+          required
+        />
+        <div class="valid-feedback">Looks good!</div>
+      </div>
+      <label for="password" class="form-label">Password</label>
+      <div class="input-group mb-3">
+        <input
+          type="password"
+          class="form-control"
+          placeholder="Enter Your Password"
+          id="password"
+          name="password"
+          required
+        />
+        <div class="valid-feedback">Looks good!</div>
+      </div>
+      <div class="mb-3">
+        <label for="email" class="form-label">Email:</label>
+        <input
+          type="email"
+          class="form-control"
+          name="email"
+          placeholder="example@email.com"
+          id="email"
+          required
+        />
+        <div class="valid-feedback">Looks good!</div>
+      </div>
+      <div class="mb-3">
+        <label for="contactNo" class="form-label">Phone Number:</label>
+        <input
+          type="tel"
+          class="form-control"
+          name="contactNo"
+          placeholder="000 000 000 000"
+          id="contactNo"
+          required
+        />
+        <div class="valid-feedback">Looks good!</div>
+      </div>
+      <div class="col-12">
+        <a href="/campgrounds" class="btn btn-warning">Cancel</a>
+        <button type="submit" class="btn btn-primary">Sign Up</button>
+      </div>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,19 @@
+<footer class="footer bg-dark py-2 mt-auto">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 pt-3">
+        <span class="text-muted">&copy; Yelpcamp 2021</span>
+      </div>
+      <div class="col-md-6">
+        <nav class="navbar navbar-expand-sm navbar-dark p-none bg-dark ms-auto">
+          <div class="navbar-nav ms-auto">
+            <% if(!currentUser) {%>
+            <a class="nav-link" href="/patner_login">Login as a Patner</a>
+            <a class="nav-link" href="/reg_patner">Register as a Patner</a>
+            <% } %>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </div>
+</footer>

@@ -1,0 +1,42 @@
+<% layout('layout/boilerplate') %>
+
+<div class="row mt-3">
+  <h2 class="text-center">Patner's Login</h2>
+  <div class="col-6 offset-3">
+    <form
+      class="validated-form g-3"
+      action="/patner_login"
+      method="post"
+      novalidate
+    >
+      <div class="mb-3">
+        <label for="username" class="form-label">User Name:</label>
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Enter Your UserName"
+          name="username"
+          id="username"
+          required
+        />
+        <div class="valid-feedback">Looks good!</div>
+      </div>
+      <label for="password" class="form-label">Password</label>
+      <div class="input-group mb-3">
+        <input
+          type="password"
+          class="form-control"
+          placeholder="Enter Your Password"
+          id="password"
+          name="password"
+          required
+        />
+        <div class="valid-feedback">Looks good!</div>
+      </div>
+      <div class="col-12">
+        <a href="/campgrounds" class="btn btn-warning">Cancel</a>
+        <button type="submit" class="btn btn-primary">Login</button>
+      </div>
+    </form>
+  </div>
+</div>

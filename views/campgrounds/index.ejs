@@ -1,0 +1,31 @@
+<% layout('layout/boilerplate') %>
+<h3>Showing the available Campgrounds</h3>
+<div class="row">
+  <% for(let i = 0, c = 0; i <= 1, c < campgrounds.length; c++,i++) { %>
+  <div class="col-lg-6">
+    <div class="card mb-3">
+      <div class="row">
+        <div class="col-4 m-auto">
+          <img
+            src="<%= campgrounds[c].image %> "
+            class="img-fluid"
+            style="height: 10rem"
+            alt="..."
+          />
+        </div>
+        <div class="col-7">
+          <div class="card-body">
+            <h5 class="card-title"><%= campgrounds[c].title %></h5>
+            <p class="card-text"><%= campgrounds[c].description %></p>
+            <a
+              href="/campgrounds/<%= campgrounds[c]._id %> "
+              class="btn btn-sm btn-primary"
+              >View Campground</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <% } %>
+</div>
